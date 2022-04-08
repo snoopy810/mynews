@@ -60,8 +60,24 @@
                     <div class="collapse navbar-collapse"
                          id="navbarSupportedContent">
                         
+                        //Right Side Of Navbar
                         
                         <ul class="navbar-nav mr-auto">
+                            //ログインしていなかったらログイン画面へ
+                            @guest
+                            　　<li><a class="nav-link" href="{{ route('login')s
+                            }}">{{ __('Login') }}</a></li>
+                            //ログインしたらユーザー名とログアウトボタン表示
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle"
+                                    href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                     {{ Auth::user()->name }} <span class="caret"></span></a>
+                                        
+                                    </a>
+                                </li>
+                                
+                            
                             
                         </ul>
                         
