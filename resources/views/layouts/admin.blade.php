@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{  app()->getLocale()}}">
+<html lang="{{  app()->getLocale()  }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,14 +60,14 @@
                     <div class="collapse navbar-collapse"
                          id="navbarSupportedContent">
                         
-                        //Right Side Of Navbar
+                        <!-- Right Side Of Navbar -->
                         
                         <ul class="navbar-nav mr-auto">
-                            //ログインしていなかったらログイン画面へ
+                        <!-- Authentication Links -->    
                             @guest
                             　　<li><a class="nav-link" href="{{ route('login')
                             }}">{{ __('Login') }}</a></li>
-                            //ログインしたらユーザー名とログアウトボタン表示
+                        
                             @else
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown"
